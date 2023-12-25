@@ -20,13 +20,9 @@ import { API } from '../../pages/api/gist';
 export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; }}}) => {
   const category = BLOG_POST;
   const { data } = useQuery(
-    ["API.of().readItem", category, post?.id, post?.body],
+    ["API.of().readItem", category, post?.id],
     async () => {
-      if (post?.body == null) {
-        return await API.of(category).readItem(post?.id as string)
-      }
-
-      return post;
+      return await API.of(category).readItem(post?.id as string)
     },
     {
       initialData: null,
