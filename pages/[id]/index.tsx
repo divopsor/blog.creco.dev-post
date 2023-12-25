@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true, // false or "blocking"
+    fallback: true,
   }
 }
 
@@ -41,15 +41,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const post = posts.items.find((post: any) => post.id === params!.id)!;
 
   return { props: { post } }
-}
-export const generateStaticParams = async () => {
-  const posts = await fetchList();
-  const result = posts.items.map((post: any) => {
-    return { id: post.id };
-  });
-
-  return [
-    { id: 'noop' },
-    ...result,
-  ];
 }
