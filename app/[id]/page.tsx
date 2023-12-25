@@ -1,3 +1,3 @@
 'use client';
 
-export { DetailsPage as default } from "../containers/DetailsPage";
+export { DetailsPage as default, generateStaticParams } from "../containers/DetailsPage";

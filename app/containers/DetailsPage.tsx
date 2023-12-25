@@ -1,13 +1,11 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import { useParams } from 'next/navigation';
 import { API } from '../api/index';
 import { BLOG_POST } from '../api/constant';
 import { Card } from '@divops-packages/ui';
 
-export const DetailsPage = () => {
-  const params = useParams();
+export const DetailsPage = ({ params }: { params: { id: string }}) => {
   const category = BLOG_POST;
   const { data } = useQuery(
     ["API.of().readItem", category, params.id],
@@ -23,3 +21,13 @@ export const DetailsPage = () => {
     </div>
   )
 };
+
+export async function generateStaticParams() {
+  const { data: posts } = await fetch('https://blog.creco.dev/api/gist/ce62b77189108398c8655c33dbb608ee/list').then((res) => res.json())
+ 
+  console.log({ posts });
+
+  return posts.map((post: any) => ({
+    id: post.id,
+  }))
+}
