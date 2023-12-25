@@ -5,19 +5,19 @@ import { useQuery } from '@tanstack/react-query';
 import { BLOG_POST } from '../../pages/api/constant';
 import { API } from '../../pages/api/gist';
 
-export const FastDetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; }}}) => {
-  const [title, ...body] = post?.body.contents.trim().split('\n') ?? [];
+// export const FastDetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; }}}) => {
+//   const [title, ...body] = post?.body.contents.trim().split('\n') ?? [];
 
-  return (
-    <div>
-      <p style={{ fontSize: '8px' }}>{post?.id}</p>
-      <h2>{title}</h2>
-      <Card>{body}</Card>
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       <p style={{ fontSize: '8px' }}>{post?.id}</p>
+//       <h2>{title}</h2>
+//       <Card>{body}</Card>
+//     </div>
+//   )
+// }
 
-export const SlowDetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; }}}) => {
+export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; }}}) => {
   const category = BLOG_POST;
   const { data } = useQuery(
     ["API.of().readItem", category, post?.id, post?.body],
@@ -27,6 +27,9 @@ export const SlowDetailsPage = ({ post }: { post?: { id: string; body: { content
       }
 
       return post;
+    },
+    {
+      initialData: post,
     }
   );
 
@@ -41,10 +44,6 @@ export const SlowDetailsPage = ({ post }: { post?: { id: string; body: { content
   )
 };
 
-export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; }}}) => {
-  if (post?.body != null) {
-    return <FastDetailsPage post={post} />
-  }
-  
-  return <SlowDetailsPage post={post} />
-}
+// export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; }}}) => {
+//   return <SlowDetailsPage post={post} />
+// }
