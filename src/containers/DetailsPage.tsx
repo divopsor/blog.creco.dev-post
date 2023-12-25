@@ -33,6 +33,9 @@ export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: s
     }
   );
 
+  console.log({ post });
+  console.log({ data });
+
   const [title, ...body] = ((data ?? {})?.data ?? post)?.body.contents.trim().split('\n') ?? [];
 
   return (
