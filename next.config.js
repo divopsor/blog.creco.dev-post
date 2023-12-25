@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = (phase, { defaultConfig }) => {
   const nextConfig = {
+    trailingSlash: true,
     ...(process.env.LOCAL === 'true' ? {} : { output: 'export' }),
     // ...defaultConfig,
     reactStrictMode: true,
