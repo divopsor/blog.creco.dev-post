@@ -23,6 +23,7 @@ jobs:
 
       - name: deploy to public storage
         run: |
+          ls -al
           rm -rf public-storage 
           git clone https://$CRECO_STORAGE@github.com/creco-storage/public-storage.git
           
