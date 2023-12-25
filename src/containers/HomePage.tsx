@@ -2,9 +2,9 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
-import { API } from '../api';
-import { BLOG_POST } from '../api/constant';
 import { Card } from '@divops-packages/ui';
+import { BLOG_POST } from '../../pages/api/constant';
+import { API } from '../../pages/api/gist';
 
 export const HomePage = () => {
   const router = useRouter();
