@@ -14,6 +14,10 @@ async function fetchList () {
 }
 
 export default function ({ params }: { params: { id: string; body: { contents: string; createdAt: number } }}) {
+  if (cache != null) {
+    params = cache.items.find((x: any) => x.id === params.id);
+  }
+
   return <DetailsPage params={params} />;
 }
 
