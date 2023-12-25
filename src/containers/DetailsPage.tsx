@@ -29,11 +29,11 @@ export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: s
       return post;
     },
     {
-      initialData: post,
+      initialData: null,
     }
   );
 
-  const [title, ...body] = (data ?? {})?.data?.body.contents.trim().split('\n') ?? [];
+  const [title, ...body] = ((data ?? {})?.data ?? post)?.body.contents.trim().split('\n') ?? [];
 
   return (
     <div>
