@@ -4,9 +4,10 @@ import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
 import { BLOG_POST } from '../../pages/api/constant';
 import { API } from '../../pages/api/gist';
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes, useState } from 'react';
 import { Page } from '../components/Page';
 import { Spacing } from '../components/Spacing';
+import { Card } from '@divops-packages/ui';
 
 export const HomePage = () => {
   const router = useRouter();
@@ -34,12 +35,16 @@ export const HomePage = () => {
 };
 
 const Post = (props: HTMLAttributes<HTMLDivElement>) => {
+  const [hover, setHover] = useState(false);
+
   return (
     <div
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       {...props}
       style={{
         fontSize: '1.6rem',
-        textDecoration: 'underline',
+        textDecoration: hover ? 'underline' : 'unset',
         margin: '14px 0',
         ...props.style,
       }}
