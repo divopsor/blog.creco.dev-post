@@ -33,10 +33,18 @@ export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: s
 function withConvertor(body: string[]) {
   const result: string[] = [];
 
-  for (const token of body) {
+  for (let token of body) {
     if (token.startsWith('https://') && token.endsWith('.jpg')) {
       result.push(`<div style="text-align: center"><img src="${token}" style="max-height: 700px; max-width: 100%" /></div>`);
     } else {
+      const pattern = /!?\[([^\]]*)\]\(([^\)]+)\)/gm;
+
+      const matches = [...token.matchAll(pattern) as any];
+
+      for (const match of matches) {
+        token = token.replace(match[0], `<a style="color: skyblue" href="${match[2]}" target="_blank">${match[1]}</a>`);
+      }
+
       result.push(token);
     }
   }
