@@ -18,8 +18,8 @@ export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: s
 
   return (
     <Page>
-      <p style={{ fontSize: '10px', color: Colors.SoftGrey }}>{post?.id}</p>
-      <h2>{title}</h2>
+      <p style={{ fontSize: '10px', color: Colors.DeepDark }}>{post?.id}</p>
+      <h2 style={{ textDecoration: 'underline' }}>{title}</h2>
       <Spacing size={20} />
 
       <Post dangerouslySetInnerHTML={{ __html: withConvertor(body) }} />
@@ -45,6 +45,7 @@ const Post = (props: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
       {...props}
+      className={props.className == null ? `Post` : `Post ${props.className}`}
       style={{
         fontSize: '1.6rem',
         whiteSpace: 'pre-wrap',

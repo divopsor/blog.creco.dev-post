@@ -129,4 +129,8 @@ h6 {
     cursor: pointer;
   }
 }
+
+.Post img {
+  border-radius: 16px;
+}
 `;
