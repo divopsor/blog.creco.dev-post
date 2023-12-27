@@ -14,7 +14,7 @@ async function fetchList () {
   return cache;
 }
 
-export default function ({ post }: { post: { id: string; body: { contents: string; createdAt: number; }}}) {
+export default function ({ post }: { post: { id: string; body: { contents: string; createdAt: number; updatedAt: number; }}}) {
   return <DetailsPage post={post} />;
 }
 

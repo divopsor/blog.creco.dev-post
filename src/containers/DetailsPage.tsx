@@ -6,19 +6,22 @@ import { Page } from '../components/Page';
 import { Spacing } from '../components/Spacing';
 import { Colors } from '../constants';
 
-export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; }}}) => {
+export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; updatedAt: number }}}) => {
   const category = BLOG_POST;
   const { data } = useQuery(
     ["API.of().readItem", category, post?.id],
     async () => await API.of(category).readItem(post?.id as string),
     { initialData: null }
   );
+  const details = post ?? (data ?? {})?.data;
 
-  const [title, ...body] = ((data ?? {})?.data ?? post)?.body.contents.trim().split('\n') ?? [];
+  const [title, ...body] = details?.body.contents.trim().split('\n') ?? [];
+  const date = new Date(details?.body.updatedAt ?? details?.body.createdAt);
 
   return (
     <Page>
       <p style={{ fontSize: '10px', color: Colors.DeepDark }}>{post?.id}</p>
+      <p>{date.toLocaleString('ko-KR', { timeZone: 'UTC' })}</p>
       <h2 style={{ textDecoration: 'underline' }}>{title}</h2>
       <Spacing size={20} />
 
