@@ -133,4 +133,8 @@ h6 {
 .Post img {
   border-radius: 16px;
 }
+
+bold {
+  font-weight: bold;
+}
 `;

@@ -22,7 +22,7 @@ export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: s
     <Page>
       <p style={{ fontSize: '10px', color: Colors.DeepDark }}>{post?.id}</p>
       <p>{date.toLocaleString('ko-KR', { timeZone: 'UTC' })}</p>
-      <h2 style={{ textDecoration: 'underline' }}>{title}</h2>
+      <h2 style={{ textDecoration: 'underline', wordBreak: 'keep-all' }}>{title}</h2>
       <Spacing size={20} />
 
       <Post dangerouslySetInnerHTML={{ __html: withConvertor(body) }} />
@@ -34,7 +34,12 @@ function withConvertor(body: string[]) {
   const result: string[] = [];
 
   for (let token of body) {
-    if (token.startsWith('https://') && token.endsWith('.jpg')) {
+    if (token.startsWith('#')) {
+      const [heading, ...text] = token.split(' ');
+      const size = heading.split('#').length - 1;
+      token = `<h${size}>${text.join(' ')}</h${size}>`;
+      result.push(token);
+    } else if (token.startsWith('https://') && token.endsWith('.jpg')) {
       const images = token.split(',');
 
       result.push(`
@@ -43,19 +48,26 @@ function withConvertor(body: string[]) {
         </div>
       `);
     } else {
-      const pattern = /!?\[([^\]]*)\]\(([^\)]+)\)/gm;
+      const linkPattern = /!?\[([^\]]*)\]\(([^\)]+)\)/gm;
+      const linkMatches = [...token.matchAll(linkPattern) as any];
 
-      const matches = [...token.matchAll(pattern) as any];
-
-      for (const match of matches) {
+      for (const match of linkMatches) {
         token = token.replace(match[0], `<a style="color: skyblue" href="${match[2]}" target="_blank">${match[1]}</a>`);
       }
+
+      const boldPattern = /\*\*(.*?)\*\*/gm;
+      const boldMatched = [...token.matchAll(boldPattern) as any];
+
+      for (const match of boldMatched) {
+        token = token.replace(match[0], `<bold>${match[1]}</bold>`);
+      }
+
 
       result.push(token);
     }
   }
 
-  return result.join('\n')
+  return result.join('<br/>')
 }
 
 const Post = (props: HTMLAttributes<HTMLDivElement>) => {
