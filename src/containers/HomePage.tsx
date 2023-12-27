@@ -41,7 +41,7 @@ const Post = (props: HTMLAttributes<HTMLDivElement>) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       {...props}
-      className={hover ? props.className == null ? `underline` : `underline ${props.className}` : props.className}
+      className={hover ? props.className == null ? `clickable` : `clickable ${props.className}` : props.className}
       style={{
         fontSize: '1.6rem',
         margin: '14px 0',

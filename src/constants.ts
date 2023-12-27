@@ -111,8 +111,9 @@ h6 {
   .desktop-ui {
     display: none;
   }
-  .underline {
+  .clickable {
     text-decoration: unset;
+    cursor: unset;
   }
 }
 @media (min-width: 401px) {
@@ -122,8 +123,9 @@ h6 {
   .desktop-ui {
     display: block;
   }
-  .underline {
+  .clickable {
     text-decoration: underline;
+    cursor: pointer;
   }
 }
 `;
