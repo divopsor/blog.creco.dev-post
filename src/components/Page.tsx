@@ -46,6 +46,7 @@ export const MobilePage = (props: HTMLAttributes<HTMLDivElement>) => {
 export const DesktopPage = (props: HTMLAttributes<HTMLDivElement>) => {
   const { width } = useWindowSize();
   const [hide, setHide] = useState(false);
+  const { children, ...otherProps} = props;
 
   useEffect(() => {
     const el = document.querySelector('.desktop-ui');
@@ -63,17 +64,30 @@ export const DesktopPage = (props: HTMLAttributes<HTMLDivElement>) => {
 
   return (
     <div
-      {...props}
-      className={props.className == null ? `desktop-ui` : `desktop-ui ${props.className}`}
+      {...otherProps}
+      className={otherProps.className == null ? `desktop-ui` : `desktop-ui ${otherProps.className}`}
       style={{
-        backgroundColor: Colors.Dark,
+        backgroundColor: Colors.DeepDark,
         minHeight: `100vh`,
         color: Colors.SoftWhite,
         fontSize: `1.6rem`,
-        padding: `16px`,
-        ...props.style,
+        ...otherProps.style,
       }}
-    />
+    >
+      <div
+        style={{
+          backgroundColor: Colors.Dark,
+          minHeight: `100vh`,
+          maxWidth: '1024px',
+          padding: `16px 32px`,
+          boxShadow: `0px 0px 4px 20px ${Colors.Dark}`,
+          fontSize: `1.6rem`,
+          margin: '0 auto',
+        }}
+      >
+        {children}
+      </div>
+    </div>
   );
 }
 
