@@ -1,4 +1,3 @@
-import { Card } from '@divops-packages/ui';
 import { useQuery } from '@tanstack/react-query';
 import { HTMLAttributes } from 'react';
 import { BLOG_POST } from '../../pages/api/constant';

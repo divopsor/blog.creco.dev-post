@@ -103,4 +103,27 @@ h6 {
   /* NOTE: 1 rem을 10px 기준으로 처리하도록 함 */
   font-size: 62.5%;
 }
+
+@media (max-width: 400px) {
+  .mobile-ui {
+    display: block;
+  }
+  .desktop-ui {
+    display: none;
+  }
+  .underline {
+    text-decoration: unset;
+  }
+}
+@media (min-width: 401px) {
+  .mobile-ui {
+    display: none;
+  }
+  .desktop-ui {
+    display: block;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+}
 `;

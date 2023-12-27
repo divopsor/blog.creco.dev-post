@@ -7,7 +7,6 @@ import { API } from '../../pages/api/gist';
 import { HTMLAttributes, useState } from 'react';
 import { Page } from '../components/Page';
 import { Spacing } from '../components/Spacing';
-import { Card } from '@divops-packages/ui';
 
 export const HomePage = () => {
   const router = useRouter();
@@ -42,9 +41,9 @@ const Post = (props: HTMLAttributes<HTMLDivElement>) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       {...props}
+      className={hover ? props.className == null ? `underline` : `underline ${props.className}` : props.className}
       style={{
         fontSize: '1.6rem',
-        textDecoration: hover ? 'underline' : 'unset',
         margin: '14px 0',
         ...props.style,
       }}
