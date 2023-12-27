@@ -13,7 +13,7 @@ export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: s
     async () => await API.of(category).readItem(post?.id as string),
     { initialData: null }
   );
-  const details = post ?? (data ?? {})?.data;
+  const details = (data ?? {})?.data ?? post;
 
   const [title, ...body] = details?.body.contents.trim().split('\n') ?? [];
   const date = new Date(details?.body.updatedAt ?? details?.body.createdAt);
