@@ -21,7 +21,7 @@ export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: s
   return (
     <Page>
       <p style={{ fontSize: '10px', color: Colors.DeepDark }}>{post?.id}</p>
-      <p>{date.toLocaleString('ko-KR', { timeZone: 'UTC' })}</p>
+      <p>{date.toLocaleString('ko-KR')}</p>
       <h2 style={{ textDecoration: 'underline', wordBreak: 'keep-all' }}>{title}</h2>
       <Spacing size={20} />
 
