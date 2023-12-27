@@ -35,7 +35,13 @@ function withConvertor(body: string[]) {
 
   for (let token of body) {
     if (token.startsWith('https://') && token.endsWith('.jpg')) {
-      result.push(`<div style="text-align: center"><img src="${token}" style="max-height: 700px; max-width: 100%" /></div>`);
+      const images = token.split(',');
+
+      result.push(`
+        <div style="text-align: center; display: flex; width: 100%; justify-content: space-evenly; flex-wrap: wrap; gap: 20px;">
+          ${images.map(x => `<img src="${x}" style="max-height: 400px; max-width: 100%" />`).join('')}
+        </div>
+      `);
     } else {
       const pattern = /!?\[([^\]]*)\]\(([^\)]+)\)/gm;
 
