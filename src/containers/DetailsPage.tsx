@@ -22,10 +22,24 @@ export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: s
       <h2>{title}</h2>
       <Spacing size={20} />
 
-      <Post>{body}</Post>
+      <Post dangerouslySetInnerHTML={{ __html: withConvertor(body) }} />
     </Page>
   )
 };
+
+function withConvertor(body: string[]) {
+  const result: string[] = [];
+
+  for (const token of body) {
+    if (token.startsWith('https://') && token.endsWith('.jpg')) {
+      result.push(`<div style="text-align: center"><img src="${token}" style="max-height: 700px; max-width: 100%" /></div>`);
+    } else {
+      result.push(token);
+    }
+  }
+
+  return result.join('\n')
+}
 
 const Post = (props: HTMLAttributes<HTMLDivElement>) => {
   return (
@@ -33,6 +47,8 @@ const Post = (props: HTMLAttributes<HTMLDivElement>) => {
       {...props}
       style={{
         fontSize: '1.6rem',
+        whiteSpace: 'pre-wrap',
+        wordBreak: 'keep-all',
         ...props.style,
       }}
     />
