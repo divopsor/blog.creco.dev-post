@@ -78,7 +78,7 @@ export const DesktopPage = (props: HTMLAttributes<HTMLDivElement>) => {
         style={{
           backgroundColor: Colors.Dark,
           minHeight: `100vh`,
-          maxWidth: '1024px',
+          maxWidth: '840px',
           padding: `16px 64px`,
           boxShadow: `0px 0px 4px 20px ${Colors.Dark}`,
           fontSize: `1.6rem`,
