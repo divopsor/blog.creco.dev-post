@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@babel/core", "npm:7.23.6"],\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.13"],\
             ["@divops-packages/ui", "npm:0.4.0"],\
             ["@divopsor/frontend-configs-cli", "workspace:shared/configs-cli"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
@@ -354,6 +355,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@divops-packages/blog-creco-dev", [\
+        ["npm:0.4.13", {\
+          "packageLocation": "./.yarn/cache/@divops-packages-blog-creco-dev-npm-0.4.13-6eeb63b895-d181596dfe.zip/node_modules/@divops-packages/blog-creco-dev/",\
+          "packageDependencies": [\
+            ["@divops-packages/blog-creco-dev", "npm:0.4.13"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.13", {\
+          "packageLocation": "./.yarn/__virtual__/@divops-packages-blog-creco-dev-virtual-aded1bfb10/0/cache/@divops-packages-blog-creco-dev-npm-0.4.13-6eeb63b895-d181596dfe.zip/node_modules/@divops-packages/blog-creco-dev/",\
+          "packageDependencies": [\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.13"],\
+            ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
+            ["@types/tanstack__react-query", null],\
+            ["axios", "npm:1.6.3"],\
+            ["eslint", "npm:8.44.0"],\
+            ["eslint-config-next", "virtual:5e3cc8ff11c8a40dda9c6901d56f6011ed9bd4e4495d1046a6999238b2b10ee02c428c487da2336d278f8669b081104b58dac66ea7282ab4231911f0d3a5692d#npm:13.4.9"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:5e3cc8ff11c8a40dda9c6901d56f6011ed9bd4e4495d1046a6999238b2b10ee02c428c487da2336d278f8669b081104b58dac66ea7282ab4231911f0d3a5692d#npm:18.2.0"],\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=a1c5e5"]\
+          ],\
+          "packagePeers": [\
+            "@tanstack/react-query",\
+            "@types/tanstack__react-query"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@divops-packages/ui", [\
         ["npm:0.4.0", {\
           "packageLocation": "./.yarn/cache/@divops-packages-ui-npm-0.4.0-5e3cc8ff11-b69b224348.zip/node_modules/@divops-packages/ui/",\
@@ -374,6 +403,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@divopsor/blog.creco.dev-post", "workspace:."],\
             ["@babel/core", "npm:7.23.6"],\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.13"],\
             ["@divops-packages/ui", "npm:0.4.0"],\
             ["@divopsor/frontend-configs-cli", "workspace:shared/configs-cli"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
