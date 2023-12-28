@@ -105,6 +105,10 @@ h6 {
   font-size: 62.5%;
 }
 
+html {
+  background-color: ${Colors.Dark};
+}
+
 @media (max-width: 400px) {
   .mobile-ui {
     display: block;
