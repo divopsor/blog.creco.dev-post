@@ -41,7 +41,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.23.6"],\
             ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.17"],\
             ["@divops-packages/ui", "npm:0.4.0"],\
-            ["@divopsor/frontend-configs-cli", "workspace:shared/configs-cli"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
             ["@types/babel__core", "npm:7.20.5"],\
             ["@types/eslint", "npm:8.56.0"],\
@@ -405,7 +404,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.23.6"],\
             ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.17"],\
             ["@divops-packages/ui", "npm:0.4.0"],\
-            ["@divopsor/frontend-configs-cli", "workspace:shared/configs-cli"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
             ["@types/babel__core", "npm:7.20.5"],\
             ["@types/eslint", "npm:8.56.0"],\
