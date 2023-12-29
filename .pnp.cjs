@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@babel/core", "npm:7.23.6"],\
-            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.15"],\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.16"],\
             ["@divops-packages/ui", "npm:0.4.0"],\
             ["@divopsor/frontend-configs-cli", "workspace:shared/configs-cli"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
@@ -356,17 +356,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@divops-packages/blog-creco-dev", [\
-        ["npm:0.4.15", {\
-          "packageLocation": "./.yarn/cache/@divops-packages-blog-creco-dev-npm-0.4.15-499c296e44-d7ce6115f1.zip/node_modules/@divops-packages/blog-creco-dev/",\
+        ["npm:0.4.16", {\
+          "packageLocation": "./.yarn/cache/@divops-packages-blog-creco-dev-npm-0.4.16-1eb96abc6e-075d631514.zip/node_modules/@divops-packages/blog-creco-dev/",\
           "packageDependencies": [\
-            ["@divops-packages/blog-creco-dev", "npm:0.4.15"]\
+            ["@divops-packages/blog-creco-dev", "npm:0.4.16"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.15", {\
-          "packageLocation": "./.yarn/__virtual__/@divops-packages-blog-creco-dev-virtual-1e5bb99159/0/cache/@divops-packages-blog-creco-dev-npm-0.4.15-499c296e44-d7ce6115f1.zip/node_modules/@divops-packages/blog-creco-dev/",\
+        ["virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.16", {\
+          "packageLocation": "./.yarn/__virtual__/@divops-packages-blog-creco-dev-virtual-eaaa54b97d/0/cache/@divops-packages-blog-creco-dev-npm-0.4.16-1eb96abc6e-075d631514.zip/node_modules/@divops-packages/blog-creco-dev/",\
           "packageDependencies": [\
-            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.15"],\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.16"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
             ["@types/tanstack__react-query", null],\
             ["axios", "npm:1.6.3"],\
@@ -403,7 +403,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@divopsor/blog.creco.dev-post", "workspace:."],\
             ["@babel/core", "npm:7.23.6"],\
-            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.15"],\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.16"],\
             ["@divops-packages/ui", "npm:0.4.0"],\
             ["@divopsor/frontend-configs-cli", "workspace:shared/configs-cli"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
