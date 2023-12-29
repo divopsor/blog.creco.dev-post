@@ -39,14 +39,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@babel/core", "npm:7.23.6"],\
-            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.13"],\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.15"],\
             ["@divops-packages/ui", "npm:0.4.0"],\
             ["@divopsor/frontend-configs-cli", "workspace:shared/configs-cli"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
             ["@types/babel__core", "npm:7.20.5"],\
             ["@types/eslint", "npm:8.56.0"],\
             ["@types/node", "npm:18.19.3"],\
-            ["@types/react", "npm:18.2.45"],\
+            ["@types/react", "npm:18.2.46"],\
             ["@types/react-dom", "npm:18.2.18"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:5.62.0"],\
@@ -356,17 +356,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@divops-packages/blog-creco-dev", [\
-        ["npm:0.4.13", {\
-          "packageLocation": "./.yarn/cache/@divops-packages-blog-creco-dev-npm-0.4.13-6eeb63b895-d181596dfe.zip/node_modules/@divops-packages/blog-creco-dev/",\
+        ["npm:0.4.15", {\
+          "packageLocation": "./.yarn/cache/@divops-packages-blog-creco-dev-npm-0.4.15-499c296e44-d7ce6115f1.zip/node_modules/@divops-packages/blog-creco-dev/",\
           "packageDependencies": [\
-            ["@divops-packages/blog-creco-dev", "npm:0.4.13"]\
+            ["@divops-packages/blog-creco-dev", "npm:0.4.15"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.13", {\
-          "packageLocation": "./.yarn/__virtual__/@divops-packages-blog-creco-dev-virtual-aded1bfb10/0/cache/@divops-packages-blog-creco-dev-npm-0.4.13-6eeb63b895-d181596dfe.zip/node_modules/@divops-packages/blog-creco-dev/",\
+        ["virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.15", {\
+          "packageLocation": "./.yarn/__virtual__/@divops-packages-blog-creco-dev-virtual-1e5bb99159/0/cache/@divops-packages-blog-creco-dev-npm-0.4.15-499c296e44-d7ce6115f1.zip/node_modules/@divops-packages/blog-creco-dev/",\
           "packageDependencies": [\
-            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.13"],\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.15"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
             ["@types/tanstack__react-query", null],\
             ["axios", "npm:1.6.3"],\
@@ -403,14 +403,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@divopsor/blog.creco.dev-post", "workspace:."],\
             ["@babel/core", "npm:7.23.6"],\
-            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.13"],\
+            ["@divops-packages/blog-creco-dev", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:0.4.15"],\
             ["@divops-packages/ui", "npm:0.4.0"],\
             ["@divopsor/frontend-configs-cli", "workspace:shared/configs-cli"],\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
             ["@types/babel__core", "npm:7.20.5"],\
             ["@types/eslint", "npm:8.56.0"],\
             ["@types/node", "npm:18.19.3"],\
-            ["@types/react", "npm:18.2.45"],\
+            ["@types/react", "npm:18.2.46"],\
             ["@types/react-dom", "npm:18.2.18"],\
             ["@typescript-eslint/eslint-plugin", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:5.62.0"],\
             ["@typescript-eslint/parser", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:5.62.0"],\
@@ -813,7 +813,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@tanstack/react-query", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:4.36.1"],\
             ["@tanstack/query-core", "npm:4.36.1"],\
-            ["@types/react", "npm:18.2.45"],\
+            ["@types/react", "npm:18.2.46"],\
             ["@types/react-dom", "npm:18.2.18"],\
             ["@types/react-native", null],\
             ["react", "npm:18.2.0"],\
@@ -935,10 +935,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/react", [\
-        ["npm:18.2.45", {\
-          "packageLocation": "./.yarn/cache/@types-react-npm-18.2.45-fef6344d31-40b256bdce.zip/node_modules/@types/react/",\
+        ["npm:18.2.46", {\
+          "packageLocation": "./.yarn/cache/@types-react-npm-18.2.46-9c5f157b4c-cb0e4dc7f4.zip/node_modules/@types/react/",\
           "packageDependencies": [\
-            ["@types/react", "npm:18.2.45"],\
+            ["@types/react", "npm:18.2.46"],\
             ["@types/prop-types", "npm:15.7.11"],\
             ["@types/scheduler", "npm:0.16.8"],\
             ["csstype", "npm:3.1.3"]\
@@ -951,7 +951,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.2.18-b316a8af22-8e3da404c9.zip/node_modules/@types/react-dom/",\
           "packageDependencies": [\
             ["@types/react-dom", "npm:18.2.18"],\
-            ["@types/react", "npm:18.2.45"]\
+            ["@types/react", "npm:18.2.46"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1308,10 +1308,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["acorn", [\
-        ["npm:8.11.2", {\
-          "packageLocation": "./.yarn/cache/acorn-npm-8.11.2-a470f49bb6-8184504086.zip/node_modules/acorn/",\
+        ["npm:8.11.3", {\
+          "packageLocation": "./.yarn/cache/acorn-npm-8.11.3-0d7ab48b38-76d8e7d559.zip/node_modules/acorn/",\
           "packageDependencies": [\
-            ["acorn", "npm:8.11.2"]\
+            ["acorn", "npm:8.11.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1329,7 +1329,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["acorn-jsx", "virtual:a50722a5a9326b6a5f12350c494c4db3aa0f4caeac45e3e9e5fe071da20014ecfe738fe2ebe2c9c98abae81a4ea86b42f56d776b3bd5ec37f9ad3670c242b242#npm:5.3.2"],\
             ["@types/acorn", null],\
-            ["acorn", "npm:8.11.2"]\
+            ["acorn", "npm:8.11.3"]\
           ],\
           "packagePeers": [\
             "@types/acorn",\
@@ -2798,7 +2798,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/espree-npm-9.6.1-a50722a5a9-eb8c149c7a.zip/node_modules/espree/",\
           "packageDependencies": [\
             ["espree", "npm:9.6.1"],\
-            ["acorn", "npm:8.11.2"],\
+            ["acorn", "npm:8.11.3"],\
             ["acorn-jsx", "virtual:a50722a5a9326b6a5f12350c494c4db3aa0f4caeac45e3e9e5fe071da20014ecfe738fe2ebe2c9c98abae81a4ea86b42f56d776b3bd5ec37f9ad3670c242b242#npm:5.3.2"],\
             ["eslint-visitor-keys", "npm:3.4.3"]\
           ],\
@@ -4037,7 +4037,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@opentelemetry/api", null],\
             ["@swc/helpers", "npm:0.5.2"],\
             ["@types/opentelemetry__api", null],\
-            ["@types/react", "npm:18.2.45"],\
+            ["@types/react", "npm:18.2.46"],\
             ["@types/react-dom", "npm:18.2.18"],\
             ["@types/sass", null],\
             ["busboy", "npm:1.6.0"],\
@@ -4406,7 +4406,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-dom-virtual-f7a7b17741/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/",\
           "packageDependencies": [\
             ["react-dom", "virtual:9384d653dbb5902da8dcaaabc85c6f1f6c0acdcb2506b87b9287ccbb7f34b9d787e69cd4e66a27dd93b1a43d7774d80dede4067082cd2ac0dba13d4187dee824#npm:18.2.0"],\
-            ["@types/react", "npm:18.2.45"],\
+            ["@types/react", "npm:18.2.46"],\
             ["loose-envify", "npm:1.4.0"],\
             ["react", "npm:18.2.0"],\
             ["scheduler", "npm:0.23.0"]\
@@ -4791,7 +4791,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", null],\
             ["@types/babel-plugin-macros", null],\
             ["@types/babel__core", null],\
-            ["@types/react", "npm:18.2.45"],\
+            ["@types/react", "npm:18.2.46"],\
             ["babel-plugin-macros", null],\
             ["client-only", "npm:0.0.1"],\
             ["react", "npm:18.2.0"]\
@@ -5136,7 +5136,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/use-sync-external-store-virtual-1855bbc876/0/cache/use-sync-external-store-npm-1.2.0-44f75d2564-5c639e0f8d.zip/node_modules/use-sync-external-store/",\
           "packageDependencies": [\
             ["use-sync-external-store", "virtual:8b4b51b8747149d6096597339398a6f4f962cc9ed074517e321d8daef2cc652239eb0f1782eb99fae5cc0851cf6bfc5b560cfa92f877555c07f4fa4ef51b9d0c#npm:1.2.0"],\
-            ["@types/react", "npm:18.2.45"],\
+            ["@types/react", "npm:18.2.46"],\
             ["react", "npm:18.2.0"]\
           ],\
           "packagePeers": [\
