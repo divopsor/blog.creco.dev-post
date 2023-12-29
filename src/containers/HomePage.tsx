@@ -10,6 +10,16 @@ export const HomePage = () => {
   const category = BLOG_POST;
   const { data: list = [] } = useQuery(["API.of().readList", category], GistAPI.of({ category }).readList);
 
+  const posts = list.reduce((acc: any, cur: any) => {
+    const [category] = cur.body.contents.trim().split('\n');
+    if (acc[category] == null) {
+      acc[category] = [];
+    }
+
+    acc[category].push(cur);
+
+    return acc;
+  }, {});
   return (
     <ResponsivePage
       mainBackgroundColor={Colors.Dark}
@@ -22,19 +32,34 @@ export const HomePage = () => {
       <Spacing size={20} />
 
       {
-        list.map((x: any) => (
-          <Post
-            className="clickable"
-            style={{
-              fontSize: '1.6rem',
-              margin: '14px 0',
-            }}
-            key={x.id}
-            onClick={() => {
-              router.push(`/${x.id}`);
-            }}
-          >{x.body.contents.trim().split('\n')[0]}</Post>
-        ))
+        Object.entries(posts).map(([category, posts]: any) => {
+          console.log(posts);
+          return (
+            <>
+              <h4>{category}</h4>
+              <ul>
+                {
+                  posts.map((x: any) => (
+                    <li
+                      className="clickable"
+                      style={{
+                        listStyle: 'circle',
+                        fontSize: '1.6rem',
+                        margin: '14px 0',
+                        listStylePosition: 'inside',
+                        textIndent: '4px',
+                      }}
+                      key={x.id}
+                      onClick={() => {
+                        router.push(`/${x.id}`);
+                      }}
+                    >{x.body.contents.trim().split('\n')[1]}</li>
+                  ))
+                }
+              </ul>
+            </>
+          );
+        })
       }
     </ResponsivePage>
   )
