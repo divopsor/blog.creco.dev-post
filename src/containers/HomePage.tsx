@@ -8,7 +8,12 @@ import { BLOG_POST } from '../constants';
 
 export const HomePage = ({ posts: list }: { posts: any }) => {
   const router = useRouter();
-  const { data } = useQuery(["API.of().readList", BLOG_POST], GistAPI.of({ category: BLOG_POST }).readList);
+  const { data } = useQuery(
+    ["API.of().readList", BLOG_POST],
+    async () => await GistAPI.of({ category: BLOG_POST }).readList(),
+    { initialData: null }
+  );
+
   const posts = (data ?? list).map(parsePost) as Array<ReturnType<typeof parsePost>>;
 
   posts.sort((postA, postB) => postA.createdAt > postB.createdAt ? -1 : 1);
