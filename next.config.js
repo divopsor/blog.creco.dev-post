@@ -27,6 +27,12 @@ module.exports = (phase, { defaultConfig }) => {
           permanent: false,
           basePath: false,
         },
+        {
+          source: '/favicon.ico',
+          destination: 'https://blog.creco.dev/favicon.ico',
+          permanent: false,
+          basePath: false,
+        },
       ]
     }: null,
     rewrites: process.env.LOCAL === 'true' ? async () => {
