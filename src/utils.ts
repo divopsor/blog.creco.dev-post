@@ -14,6 +14,7 @@ export function parsePost(post?: any) {
     category,
     title,
     body: body.join('\n').trim(),
+    createdAt: details?.body.createdAt,
     timestamp,
     date
   } as const;

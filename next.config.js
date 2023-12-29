@@ -19,6 +19,16 @@ module.exports = (phase, { defaultConfig }) => {
       // your project has ESLint errors.
       ignoreDuringBuilds: true,
     },
+    redirects: process.env.LOCAL === 'true' ? async () => {
+      return [
+        {
+          source: '/',
+          destination: '/post',
+          permanent: false,
+          basePath: false,
+        },
+      ]
+    }: null,
     rewrites: process.env.LOCAL === 'true' ? async () => {
       return [
         {
