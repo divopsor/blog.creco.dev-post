@@ -8,7 +8,7 @@ export default function NotFoundPage() {
   console.log(`pathName.split('/').length`, pathName.split('/').length);
   console.log(`pathName.startsWith('/')`, pathName.startsWith('/'));
 
-  if (pathName.split('/').length === 2 && pathName.startsWith('/')) {
+  if (pathName.split('/').filter(x => x !== '').length === 1 && pathName.startsWith('/')) {
     return <DetailsPage post={{ id }}/>
   }
 
