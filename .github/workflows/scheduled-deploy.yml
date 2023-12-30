@@ -1,9 +1,12 @@
 name: deploy
+
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
-  deploy:
+  scheduled-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
