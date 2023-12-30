@@ -10,6 +10,12 @@ export const DetailsPage = ({ post }: { post?: { id: string; body?: { contents: 
     { initialData: null }
   );
 
+  const is404 = ((data ?? {})?.data ?? post).body == null;
+
+  if (is404) {
+    return <>404 Page</>;
+  }
+
   const { body, category, date, title} = parsePost((data ?? {})?.data ?? post);
 
   return (
