@@ -5,16 +5,16 @@ export function parsePost(post?: any) {
 
   const details = post;
 
-  const [category, title, ...body] = details?.body.contents.trim().split('\n') ?? [];
-  const timestamp = details?.body.updatedAt ?? details?.body.createdAt;
+  const [category, title, ...body] = details?.body?.contents?.trim?.().split?.('\n') ?? [];
+  const timestamp = details?.body.updatedAt ?? details?.body?.createdAt;
   const date = new Date(timestamp);
 
   return {
     id: post.id,
     category,
     title,
-    body: body.join('\n').trim(),
-    createdAt: details?.body.createdAt,
+    body: body?.join('\n')?.trim?.(),
+    createdAt: details?.body?.createdAt,
     timestamp,
     date
   } as const;

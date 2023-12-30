@@ -3,7 +3,7 @@ import { GistAPI, Post, ResponsivePage, withMD2HTML, Colors, Spacing } from '@di
 import { BLOG_POST } from '../constants';
 import { parsePost } from '../utils';
 
-export const DetailsPage = ({ post }: { post?: { id: string; body: { contents: string; createdAt: number; updatedAt: number }}}) => {
+export const DetailsPage = ({ post }: { post?: { id: string; body?: { contents: string; createdAt: number; updatedAt: number }}}) => {
   const { data } = useQuery(
     ["API.of().readItem", BLOG_POST, post?.id],
     async () => await GistAPI.of({ category: BLOG_POST }).readItem(post?.id as string),
