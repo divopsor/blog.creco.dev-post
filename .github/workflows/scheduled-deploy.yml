@@ -1,4 +1,4 @@
-name: deploy
+name: scheduled-deploy
 
 on:
   workflow_dispatch:
