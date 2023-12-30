@@ -30,7 +30,7 @@ jobs:
           rm -rf ./blog.creco.dev/post
           mv ../out ./blog.creco.dev/post
           git add -A
-          git -c core.hookspath=/dev/null commit -m "${{ github.event.head_commit.message }}"
+          git -c core.hookspath=/dev/null commit -m "$(git log -1 --pretty=%B)"
           git push origin HEAD
         env:
           CRECO_STORAGE: ${{ secrets.CRECO_STORAGE }}
