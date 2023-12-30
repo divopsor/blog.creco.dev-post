@@ -31,14 +31,13 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: yarn && build and export
+      - name: yarn install && build
         run: |
           YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
           yarn build
 
       - name: deploy to public storage
         run: |
-          ls -al
           rm -rf public-storage
           git clone https://$CRECO_STORAGE@github.com/creco-storage/public-storage.git
           
