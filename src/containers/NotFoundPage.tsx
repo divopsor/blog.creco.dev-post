@@ -1,3 +1,6 @@
+import { usePathname } from 'next/navigation'
+
 export default function NotFoundPage() {
-  return <>404 page</>
+  const pathName = usePathname();
+  return <>404 page: {pathName}</>
 }

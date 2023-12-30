@@ -5,7 +5,8 @@ on:
       - 'main'
 
 jobs:
-  scheduled-deploy:
+  deploy:
+    if: (!contains(github.event.head_commit.message, 'skip vercel'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -16,13 +17,13 @@ jobs:
 
       - name: yarn && build and export
         run: |
-          YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
+          yarn
           yarn build
 
       - name: deploy to public storage
         run: |
           ls -al
-          rm -rf public-storage
+          rm -rf public-storage 
           git clone https://$CRECO_STORAGE@github.com/creco-storage/public-storage.git
           
           cd public-storage
@@ -32,7 +33,7 @@ jobs:
           rm -rf ./blog.creco.dev/post
           mv ../out ./blog.creco.dev/post
           git add -A
-          git -c core.hookspath=/dev/null commit -m "$(git log -1 --pretty=%B)"
+          git -c core.hookspath=/dev/null commit -m "${{ github.event.head_commit.message }}"
           git push origin HEAD
         env:
           CRECO_STORAGE: ${{ secrets.CRECO_STORAGE }}
