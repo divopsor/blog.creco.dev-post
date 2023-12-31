@@ -25,7 +25,7 @@ export const DetailsPage = ({ item }: { item: { id: string; body?: { contents: s
       </Head>
       <h4>{category}</h4>
       <p style={{ fontSize: '1rem', color: Colors.DeepDark }}>{item.id}</p>
-      <p style={{ fontSize: '1rem' }}>{date?.toLocaleString('ko-KR')}</p>
+      <p style={{ fontSize: '1rem' }}>{date}</p>
       <h1 style={{ textDecoration: 'underline', wordBreak: 'keep-all' }}>{title}</h1>
       <Spacing size={20} />
 

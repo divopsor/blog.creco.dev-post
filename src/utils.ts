@@ -7,7 +7,8 @@ export function parsePost(post?: any) {
 
   const [category, title, ...body] = details?.body?.contents?.trim?.().split?.('\n') ?? [];
   const timestamp = details?.body?.updatedAt ?? details?.body?.createdAt;
-  const date = new Date(timestamp);
+  const koreanGMT = 9 * 3600_000;
+  const date = new Date(timestamp + koreanGMT).toLocaleString('ko-KR', { timeZone: 'UTC' });
 
   return {
     id: post.id,
