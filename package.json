@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install && cd ../../ && yarn config-cli blog.creco.dev/post"
+    "prepare": "cd ../../ && yarn config-cli blog.creco.dev/post"
   },
   "dependencies": {
     "@babel/core": "^7.19.1",
@@ -29,7 +29,6 @@
     "eslint": "8.23.1",
     "eslint-config-next": "^13.4.13",
     "eslint-plugin-import": "^2.26.0",
-    "husky": "^8.0.1",
     "typescript": "^5"
   }
 }
