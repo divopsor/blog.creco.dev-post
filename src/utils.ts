@@ -1,12 +1,12 @@
 function formattedDate(date: Date) {
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDay() + 1;
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
+  const year = date.getUTCFullYear();
+  const month = date.getUTCMonth() + 1;
+  const _date = date.getUTCDate();
+  const hours = date.getUTCHours();
+  const minutes = date.getUTCMinutes();
+  const seconds = date.getUTCSeconds();
 
-  return `${year}년 ${month}월 ${day}일 ${hours}시 ${minutes}분 ${seconds}초`;
+  return `${year}년 ${month}월 ${_date}일 ${hours}시 ${minutes}분 ${seconds}초`;
 }
 
 export function parsePost(post?: any) {
@@ -18,7 +18,7 @@ export function parsePost(post?: any) {
 
   const [category, title, ...body] = details?.body?.contents?.trim?.().split?.('\n') ?? [];
   const timestamp = details?.body?.updatedAt ?? details?.body?.createdAt;
-  const date = formattedDate(new Date(timestamp));
+  const date = formattedDate(new Date(timestamp + 9 * 3600_000));
 
   return {
     id: post.id,
