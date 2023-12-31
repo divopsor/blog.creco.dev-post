@@ -26,13 +26,12 @@ export const HomePage = ({ list: initialList }: { list: any }) => {
       {
         list.map((item: any) => {
           return (
-            <li key={item.id}>
+            <li key={item.id} style={{ marginBottom: '48px' }}>
               <Link
                 href={`/${item.id}`}
                 className="clickable"
                 style={{
                   fontSize: '1.6rem',
-                  margin: '0 0 48px',
                   textDecoration: 'unset',
                 }}
               >
