@@ -1,5 +1,5 @@
 import { Post, ResponsivePage, withMD2HTML, Colors, Spacing } from '@divops-packages/blog-creco-dev';
-import { Head } from 'next/document';
+import { Head } from 'next/head';
 import { usePost } from '../hooks/usePost';
 import { parsePost } from '../utils';
 
