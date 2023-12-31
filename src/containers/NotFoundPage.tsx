@@ -6,7 +6,7 @@ export default function NotFoundPage() {
   const [, id] = pathName?.split('/') ?? [];
 
   if (pathName?.split('/').filter(x => x !== '').length === 1 && pathName.startsWith('/')) {
-    return <DetailsPage post={{ id }}/>
+    return <DetailsPage item={{ id }}/>
   }
 
   return <>404 page: {pathName}</>

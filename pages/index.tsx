@@ -7,5 +7,5 @@ export const getStaticProps = async () => {
 
   const { data } = await fetch(url).then((res) => res.json());
 
-  return { props: { posts: data.items } };
+  return { props: { list: data.items } };
 }
