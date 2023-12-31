@@ -1,12 +1,10 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { Colors, ResponsivePage, Spacing } from '@divops-packages/blog-creco-dev';
 import { usePosts } from '../hooks/usePosts';
 import Link from 'next/link';
 
 export const HomePage = ({ list: initialList }: { list: any }) => {
-  const router = useRouter();
   const list = usePosts(initialList);
 
   list.sort((itemA, itemB) => itemA.createdAt > itemB.createdAt ? -1 : 1);
