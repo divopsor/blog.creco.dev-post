@@ -6,6 +6,6 @@ export const getStaticPaths = async () => getCrecoAppStaticPaths({ category: 'bl
 
 export const getStaticProps: GetStaticProps = async (context) => getCrecoAppStaticProps(context, { category: 'blog-post' });
 
-export default function ({ post }: { post: { id: string; body: { contents: string; createdAt: number; updatedAt: number; }}}) {
+export default function ({ post }: { post: { id: string; body?: { contents: string; createdAt: number; updatedAt: number; }}}) {
   return <DetailsPage post={post} />;
 }

@@ -1,15 +1,9 @@
-import { useQuery } from '@tanstack/react-query';
-import { GistAPI, Post, ResponsivePage, withMD2HTML, Colors, Spacing } from '@divops-packages/blog-creco-dev';
-import { BLOG_POST } from '../constants';
+import { Post, ResponsivePage, withMD2HTML, Colors, Spacing } from '@divops-packages/blog-creco-dev';
+import { usePost } from '../hooks/usePost';
 import { parsePost } from '../utils';
 
-export const DetailsPage = ({ post }: { post?: { id: string; body?: { contents: string; createdAt: number; updatedAt: number }}}) => {
-  const { data } = useQuery(
-    ["API.of().readItem", BLOG_POST, post?.id],
-    async () => await GistAPI.of({ category: BLOG_POST }).readItem(post?.id as string),
-    { initialData: null }
-  );
-
+export const DetailsPage = ({ post }: { post: { id: string; body?: { contents: string; createdAt: number; updatedAt: number }}}) => {
+  const data = usePost(post.id);
   const is404 = ((data ?? {})?.data ?? post)?.body == null;
 
   if (is404) {

@@ -1,20 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Colors, ResponsivePage, Spacing, GistAPI } from '@divops-packages/blog-creco-dev';
-import { parsePost } from '../utils';
-import { useQuery } from '@tanstack/react-query';
-import { BLOG_POST } from '../constants';
+import { Colors, ResponsivePage, Spacing } from '@divops-packages/blog-creco-dev';
+import { usePosts } from '../hooks/usePosts';
 
-export const HomePage = ({ posts: list }: { posts: any }) => {
+export const HomePage = ({ posts: initialPosts }: { posts: any }) => {
   const router = useRouter();
-  const { data } = useQuery(
-    ["API.of().readList", BLOG_POST],
-    async () => await GistAPI.of({ category: BLOG_POST }).readList(),
-    { initialData: null }
-  );
-
-  const posts = (data ?? list).map(parsePost) as Array<ReturnType<typeof parsePost>>;
+  const posts = usePosts(initialPosts);
 
   posts.sort((postA, postB) => postA.createdAt > postB.createdAt ? -1 : 1);
 
