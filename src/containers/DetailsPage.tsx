@@ -19,6 +19,9 @@ export const DetailsPage = ({ item }: { item: { id: string; body?: { contents: s
       fontColor={Colors.SoftWhite}
       desktopPageWidth="840px"
     >
+      <Head>
+        <title>{title}</title>
+      </Head>
       <h4>{category}</h4>
       <p style={{ fontSize: '1rem', color: Colors.DeepDark }}>{item.id}</p>
       <p style={{ fontSize: '1rem' }}>{date?.toLocaleString('ko-KR')}</p>
