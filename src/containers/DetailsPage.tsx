@@ -22,7 +22,7 @@ export const DetailsPage = ({ item }: { item: { id: string; body?: { contents: s
       <h4>{category}</h4>
       <p style={{ fontSize: '1rem', color: Colors.DeepDark }}>{item.id}</p>
       <p style={{ fontSize: '1rem' }}>{date?.toLocaleString('ko-KR')}</p>
-      <h2 style={{ textDecoration: 'underline', wordBreak: 'keep-all' }}>{title}</h2>
+      <h1 style={{ textDecoration: 'underline', wordBreak: 'keep-all' }}>{title}</h1>
       <Spacing size={20} />
 
       <Post dangerouslySetInnerHTML={{ __html: withMD2HTML(body) }} />
