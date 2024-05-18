@@ -50,6 +50,8 @@ export const DetailsPage = ({ item }: { item: { id: string; body?: { contents: s
       <Spacing size={60} />
 
       <Post style={{ textIndent: '0px' }} dangerouslySetInnerHTML={{ __html: withMD2HTML(body) }} />
+      
+      <Spacing size={60} />
     </ResponsivePage>
   )
 };
