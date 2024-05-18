@@ -1,3 +1,11 @@
+export function formattedDateYYYYMMDD(date: Date) {
+  const year = date.getUTCFullYear();
+  const month = date.getUTCMonth() + 1;
+  const _date = date.getUTCDate();
+
+  return `${year}-${month < 10 ? '0' + month : month}-${_date < 10 ? '0' + _date : _date}`;
+}
+
 function formattedDate(date: Date) {
   const year = date.getUTCFullYear();
   const month = date.getUTCMonth() + 1;
