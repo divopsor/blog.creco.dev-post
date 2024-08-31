@@ -10,13 +10,13 @@ import NotFoundPage from "../../src/containers/NotFoundPage";
 export const getStaticPaths = async () =>
   getCrecoAppStaticPaths({
     category: CATEGORY,
-    prefix: "/github-api/gist",
+    prefix: "/github-api/api/gist",
   });
 
 export const getStaticProps: GetStaticProps = async (context) =>
   getCrecoAppStaticProps(context, {
     category: CATEGORY,
-    prefix: "/github-api/gist",
+    prefix: "/github-api/api/gist",
   });
 
 export default function ({
