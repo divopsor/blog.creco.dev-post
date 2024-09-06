@@ -5,6 +5,7 @@ import { Header } from '../components/Header';
 import { Logo } from '../components/Logo';
 import { usePost } from '../hooks/usePost';
 import { formattedDateYYYYMMDD, parsePost } from '../utils';
+import Giscus from '@giscus/react';
 
 export const DetailsPage = ({ item }: { item: { id: string; body?: { contents: string; createdAt: number; updatedAt: number }}}) => {
   const data = usePost(item.id);
@@ -52,6 +53,22 @@ export const DetailsPage = ({ item }: { item: { id: string; body?: { contents: s
       <Post style={{ textIndent: '0px' }} dangerouslySetInnerHTML={{ __html: withMD2HTML(body) }} />
       
       <Spacing size={60} />
+      <Giscus
+        id="comments"
+        repo="divopsor/blog.creco.dev-main"
+        repoId="R_kgDOK_YnUw"
+        category="General"
+        categoryId="DIC_kwDOK_YnU84Ch8Ry"
+        mapping="url"
+        term="Welcome to @giscus/react component!"
+        reactionsEnabled="1"
+        emitMetadata="1"
+        inputPosition="top"
+        theme="preferred_color_scheme"
+        lang="ko"
+        loading="lazy"
+        strict='0'
+      />
     </ResponsivePage>
   )
 };
