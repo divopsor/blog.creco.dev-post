@@ -36,8 +36,8 @@ export function parsePost(post: Item) {
 
   return {
     id: post.id,
-    category,
-    title,
+    category: category.replace(/^<p>/, "").replace(/<\/p>$/, ""),
+    title: title.replace(/^<p>/, "").replace(/<\/p>$/, ""),
     body: body?.join("<br>")?.trim?.(),
     createdAt: details?.body?.createdAt,
     timestamp,
