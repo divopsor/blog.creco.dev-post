@@ -22,7 +22,7 @@ export function usePost(id: string) {
     (async () => {
       try {
         const item = detailData?.data as Item;
-        if (item.body == null) {
+        if (item?.body == null) {
           return;
         }
 
