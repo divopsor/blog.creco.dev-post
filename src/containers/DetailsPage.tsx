@@ -26,7 +26,7 @@ export const DetailsPage = ({ item }: { item: Item }) => {
         margin: "0 auto",
       }}>
       <Header>
-        <Logo />
+        <Logo href="/" />
       </Header>
 
       <Spacing size={20} />

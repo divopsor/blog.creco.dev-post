@@ -31,7 +31,7 @@ export const HomePage = ({ list: initialList }: { list: any }) => {
         margin: "0 auto",
       }}>
         <Header>
-          <Logo />
+          <Logo href="https://blog.creco.dev" />
         </Header>
 
         <Spacing size={20} />
