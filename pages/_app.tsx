@@ -48,6 +48,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </CrecoApp>
       <style global jsx>{cssText}</style>
+      <style global jsx>
+        {`
+          * {
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+          }
+        `}
+      </style>
     </>
   )
 }
