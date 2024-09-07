@@ -5,11 +5,9 @@
     "dev": "LOCAL=true next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "cd ../../ && yarn config-cli blog.creco.dev/post"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@babel/core": "^7.19.1",
     "@divops-packages/blog-creco-dev": "^0.5.2",
     "@divops-packages/ui": "^0.4.0",
     "@giscus/react": "2.4.0",
@@ -20,7 +18,6 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@types/babel__core": "^7",
     "@types/eslint": "^8",
     "@types/node": "^18",
     "@types/react": "^18",

@@ -42,6 +42,11 @@ module.exports = (phase, { defaultConfig }) => {
           destination: 'https://app.divops.kr/github-api/api/:slug*', // Matched parameters can be used in the destination
           basePath: false,
         },
+        {
+          source: '/api/:slug*',
+          destination: 'https://app.divops.kr/api/:slug*', // Matched parameters can be used in the destination
+          basePath: false,
+        },
       ];
     }: null,
   };
