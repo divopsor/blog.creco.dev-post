@@ -44,12 +44,13 @@ export function parsePost(post: Item) {
     timestamp,
     date,
     thumbnail: extractFirstImage(details?.body?.contents),
+    description: extractSentenceByOrder(details?.body?.contents),
   } as const;
 }
 
 function extractFirstImage(contents?: string) {
   if (!contents) {
-    return null; // Contents가 없으면 null 반환
+    return null;
   }
 
   // 이미지 태그를 찾는 정규식
@@ -60,4 +61,15 @@ function extractFirstImage(contents?: string) {
 
   // 이미지 URL 반환 (match가 있으면 첫 번째 그룹 반환)
   return match ? match[1] : null;
+}
+
+function extractSentenceByOrder(contents?: string) {
+  if (!contents) {
+    return null;
+  }
+
+  const sentences = contents.split(/\n/).filter((x) => x.length > 0);
+  const targetSentence = sentences[2];
+
+  return targetSentence || null; // 해당 순서에 문장이 있으면 반환, 없으면 null 반환
 }
