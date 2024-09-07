@@ -11,7 +11,8 @@ import { Item } from '../types';
 import styles from './DetailsPage.module.css';
 
 export const DetailsPage = ({ item }: { item: Item }) => {
-  const data = item.body == null ? usePost(item.id) as Item : item;
+  const freshData = usePost(item.id);
+  const data = freshData ?? item;
   const { category, title, body } = parsePost(data);
 
   return (
@@ -49,7 +50,6 @@ export const DetailsPage = ({ item }: { item: Item }) => {
       <Spacing size={20} />
 
       <Divider />
-      <Spacing size={60} />
 
       <Post className={styles.post} dangerouslySetInnerHTML={{ __html: body! }} />
       
