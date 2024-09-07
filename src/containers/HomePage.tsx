@@ -11,7 +11,13 @@ import { formattedDateYYYYMMDD } from '../utils';
 export const HomePage = ({ list: initialList }: { list: any }) => {
   const list = usePosts(initialList);
 
-  list.sort((itemA, itemB) => itemA.createdAt > itemB.createdAt ? -1 : 1);
+  list.sort((itemA, itemB) => {
+    if (itemA?.createdAt == null || itemB?.createdAt == null) {
+      return 0;
+    }
+
+    return itemA.createdAt > itemB.createdAt ? -1 : 1
+  });
 
   return (
     <ResponsivePage
@@ -58,7 +64,7 @@ export const HomePage = ({ list: initialList }: { list: any }) => {
                 <span style={{ lineHeight: '100%', fontSize: '1.2rem' }}>{item.category}</span>
                 <h3>{item.title}</h3>
                 <Spacing size={20} />
-                <span style={{ lineHeight: '100%', color: Colors.SoftGrey }}>{item.body.split('\n')[0]}</span>
+                <span style={{ lineHeight: '100%', color: Colors.SoftGrey }}>{item.body.split(/<br>|\n/)[0]}</span>
                 <Spacing size={20} />
                 <p style={{ color: 'rgb(14, 165, 233)' }}>Read more →</p>
               </Link>

@@ -27,17 +27,18 @@ export function parsePost(post: Item) {
   }
 
   const details = post;
+  const contents = details?.body?.markdown ?? details?.body?.contents;
 
   const [category, title, ...body] =
-    details?.body?.markdown?.trim?.().split?.("<br>") ?? [];
+    contents?.trim?.().split?.(/<br>|\n/) ?? [];
   const timestamp =
     details?.body?.updatedAt ?? (details?.body?.createdAt as number);
   const date = formattedDate(new Date(timestamp + 9 * 3600_000));
 
   return {
     id: post.id,
-    category: category.replace(/^<p>/, "").replace(/<\/p>$/, ""),
-    title: title.replace(/^<p>/, "").replace(/<\/p>$/, ""),
+    category: category?.replace(/^<p>/, "").replace(/<\/p>$/, ""),
+    title: title?.replace(/^<p>/, "").replace(/<\/p>$/, ""),
     body: body?.join("<br>")?.trim?.(),
     createdAt: details?.body?.createdAt,
     timestamp,
