@@ -19,8 +19,12 @@ export const DetailsPage = ({ item }: { item: Item }) => {
       mainBackgroundColor={Colors.Dark}
       subBackgroundColor={Colors.DeepDark}
       fontColor={Colors.SoftWhite}
-      desktopPageWidth="840px"
+      desktopPageWidth="1200px"
     >
+      <div style={{
+        maxWidth: '840px',
+        margin: "0 auto",
+      }}>
       <Header>
         <Logo />
       </Header>
@@ -66,6 +70,7 @@ export const DetailsPage = ({ item }: { item: Item }) => {
         loading="lazy"
         strict='0'
       />
+      </div>
     </ResponsivePage>
   )
 };
