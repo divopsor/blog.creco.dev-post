@@ -43,5 +43,21 @@ export function parsePost(post: Item) {
     createdAt: details?.body?.createdAt,
     timestamp,
     date,
+    thumbnail: extractFirstImage(details?.body?.contents),
   } as const;
+}
+
+function extractFirstImage(contents?: string) {
+  if (!contents) {
+    return null; // Contents가 없으면 null 반환
+  }
+
+  // 이미지 태그를 찾는 정규식
+  const imageRegex = /!\[.*?\]\((.*?)\)/;
+
+  // 첫 번째 이미지 URL 추출
+  const match = contents.match(imageRegex);
+
+  // 이미지 URL 반환 (match가 있으면 첫 번째 그룹 반환)
+  return match ? match[1] : null;
 }

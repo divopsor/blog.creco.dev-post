@@ -13,7 +13,7 @@ import styles from './DetailsPage.module.css';
 export const DetailsPage = ({ item }: { item: Item }) => {
   const freshData = usePost(item.id);
   const data = freshData ?? item;
-  const { category, title, body } = parsePost(data);
+  const { category, title, body, thumbnail } = parsePost(data);
 
   return (
     <ResponsivePage
@@ -34,6 +34,20 @@ export const DetailsPage = ({ item }: { item: Item }) => {
 
       <Head>
         <title>{title}</title>
+        <meta property="og:title" content={title} key="title" />
+        <meta property="og:description" content={body?.split("<br>").slice(0,10).join('\n')} key="description" />
+        {thumbnail != null ? <meta property="og:image" content={thumbnail} key="image" /> : null}
+        <meta property="og:url" content={`https://blog.creco.dev/post/${item.id}`} key="url" />
+        <meta property="og:type" content="article" key="type" />
+        <meta property="og:site_name" content="Creco's Blog" key="site_name" />
+        <meta property="og:locale" content="ko_KR" key="locale" />
+        <meta name="twitter:card" content="summary" key="twitter_card" />
+        <meta name="twitter:site" content="@CreatiCoding" key="twitter_site" />
+        <meta name="twitter:creator" content="@CreatiCoding" key="twitter_creator" />
+        <meta name="twitter:title" content={title} key="twitter_title" />
+        <meta name="twitter:description" content={body?.split("<br>").slice(0,10).join('\n')} key="twitter_description" />
+        {thumbnail != null ? <meta name="twitter:image" content={thumbnail} key="twitter_image" /> : null}
+        <meta name="twitter:url" content={`https://blog.creco.dev/post/${item.id}`} key="twitter_url" />
       </Head>
 
       <div style={{ textAlign: 'center' }}>
