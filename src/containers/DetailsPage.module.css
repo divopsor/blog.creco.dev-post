@@ -5,6 +5,7 @@
 .post strong {
   font-weight: 600;
 }
+
 .post img {
   width: 100%;
   display: block;
@@ -43,4 +44,10 @@
 
 .post > p {
   line-height: 1.6;
+}
+
+.post code {
+  background: #535353;
+  border-radius: 8px;
+  padding: 4px;
 }
